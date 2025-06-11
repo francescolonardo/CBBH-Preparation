@@ -34,7 +34,8 @@ In the Introduction to Web Applications module, you will learn all of the basics
 
 Web application penetration testing frameworks are an essential part of any web penetration test. This module will teach you two of the best frameworks: Burp Suite and OWASP ZAP.
 
-- [x] Web Proxy (Burp vs ZAP)
+- [x] Burp Suite vs OWASP ZAP
+- [x] Web Proxy
 - [x] Web Fuzzer
 - [x] Web Scanner
 
@@ -56,7 +57,8 @@ This module equips learners with essential web reconnaissance skills, crucial fo
 
 This module covers the fundamental enumeration skills of web fuzzing and directory brute forcing using the Ffuf tool. The techniques learned in this module will help us in locating hidden pages, directories, and parameters when targeting web applications.
 
-- [x] Directory/Page Fuzzing
+- [x] Directory Fuzzing
+- [x] Page Fuzzing
 - [x] Subdomain Fuzzing
 - [x] Virtual Host Fuzzing
 - [x] Parameter Fuzzing
@@ -97,43 +99,43 @@ The SQLMap Essentials module will teach you the basics of using SQLMap to discov
 - [x] Database Enumeration
 - [x] Advanced SQLMap Usage
 
-### 10 [Command Injections](./10_.md)
+### 10 [Command Injections](./10_command_injection.md)
 
 Command injection vulnerabilities can be leveraged to compromise a hosting server and its entire network. This module will teach you how to identify and exploit command injection vulnerabilities and how to use various filter bypassing techniques to avoid security mitigations.
 
-### 11 [File Upload Attacks](./11_.md)
+### 11 [File Upload Attacks](./11_file_upload_attacks.md)
 
 Arbitrary file uploads are among the most critical web vulnerabilities. These flaws enable attackers to upload malicious files, execute arbitrary commands on the back-end server, and even take control over the entire server and all web applications hosted on it and potentially gain access to sensitive data or cause a service disruption.
 
-### 12 [Server-side Attacks](./12_.md)
+### 12 [Server-side Attacks](./12_server_side_attacks.md)
 
 A backend that handles user-supplied input insecurely can lead to devastating security vulnerabilities such as sensitive information disclosure and remote code execution. This module covers how to identify and exploit server-side bugs, including Server-Side Request Forgery (SSRF), Server-Side Template Injection (SSTI), and Server-Side Includes (SSI) injection attacks.
 
-### 13 [Login Brute Forcing](./13_.md)
+### 13 [Login Brute Forcing](./13_login_brute_forcing.md)
 
 The module contains an exploration of brute-forcing techniques, including the use of tools like Hydra and Medusa, and the importance of strong password practices. It covers various attack scenarios, such as targeting SSH, FTP, and web login forms.
 
-### 14 [Broken Authentication](./14_.md)
+### 14 [Broken Authentication](./14_broken_authentication.md)
 
 Authentication is probably the most straightforward and prevalent measure used to secure access to resources, and it's the first line of defense against unauthorized access. Broken authentication is listed as #7 on the 2021 OWASP Top 10 Web Application Security Risks, falling under the broader category of Identification and Authentication failures. A vulnerability or misconfiguration at the authentication stage can impact an application's overall security.
 
-### 15 [Web Attacks](./15_.md)
+### 15 [Web Attacks](./15_web_attacks.md)
 
 This module covers three common web vulnerabilities, HTTP Verb Tampering, IDOR, and XXE, each of which can have a significant impact on a company's systems. We will cover how to identify, exploit, and prevent each of them through various methods.
 
-### 16 [File Inclusion](./16_.md)
+### 16 [File Inclusion](./16_file_inclusion.md)
 
 File Inclusion is a common web application vulnerability, which can be easily overlooked as part of a web application's functionality.
 
-### 17 [Session Security](./17_.md)
+### 17 [Session Security](./17_session_security.md)
 
 Maintaining and keeping track of a user's session is an integral part of web applications. It is an area that requires extensive testing to ensure it is set up robustly and securely. This module covers the most common attacks and vulnerabilities that can affect web application sessions, such as Session Hijacking, Session Fixation, Cross-Site Request Forgery, Cross-Site Scripting, and Open Redirects.
 
-### 18 [Web Service & API Attacks](./18_.md)
+### 18 [Web Service & API Attacks](./18_web_services_and_api_attacks.md)
 
 Web services and APIs are frequently exposed to provide certain functionalities in a programmatic way between heterogeneous devices and software components. Both web services and APIs can assist in integrating different applications or facilitate separation within a given application. This module covers how to identify the functionality a web service or API offers and exploit any security-related inefficiencies.
 
-### 19 [Hacking WordPress](./19_.md)
+### 19 [Hacking WordPress](./19_hacking_wordpress.md)
 
 WordPress is an open-source Content Management System (CMS) that can be used for multiple purposes.
 
@@ -143,7 +145,7 @@ Bug bounty programs encourage security researchers to identify bugs and submit v
 
 ---
 
-![CBBH Key Differentiators](./assets/00_cbbh_key_ifferentiators.png)
+![CBBH Key Differentiators](./assets/00_cbbh_key_differentiators.png)
 
 ---
 ---
