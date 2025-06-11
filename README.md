@@ -84,7 +84,7 @@ Whether you're preparing for the CBBH certification or seeking to improve your s
 
 ---
 
-![eCPPTv3 Exam Topics](./assets/00_ecpptv3_exam_topics.png)
+![CBBH Key Differentiators](./assets/00_cbbh_key_ifferentiators.png)
 
 ---
 ---
