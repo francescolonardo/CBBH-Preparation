@@ -99,7 +99,7 @@ The SQLMap Essentials module will teach you the basics of using SQLMap to discov
 - [x] Database Enumeration
 - [x] Advanced SQLMap Usage
 
-### 10 [Command Injections](./10_command_injection.md)
+### 10 [Command Injections](./10_command_injections.md)
 
 Command injection vulnerabilities can be leveraged to compromise a hosting server and its entire network. This module will teach you how to identify and exploit command injection vulnerabilities and how to use various filter bypassing techniques to avoid security mitigations.
 
