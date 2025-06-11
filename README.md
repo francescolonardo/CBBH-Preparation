@@ -22,5 +22,69 @@ Whether you're preparing for the CBBH certification or seeking to improve your s
 
 ## Learning Path Topics
 
+### 01 [Web Requests](./01_web_requests.md)
+
+- [x] PowerShell Fundamentals
+- [x] PowerShell Fundamentals
+- [x] PowerShell Fundamentals
+
+### 02 [Introduction to Web Applications](./02_.md)
 
 
+### 03 [Using Web Proxies](./03_.md)
+
+
+### 04 [Information Gathering - Web Edition](./04_.md)
+
+
+### 05 [Attacking Web Applications with Ffuf](./05_.md)
+
+
+### 06 [JavaScript Deobfuscation](./06_.md)
+
+
+### 07 [Cross-Site Scripting (XSS)](./08_.md)
+
+
+### 08 [SQL Injection Fundamentals](./08_.md)
+
+
+### 09 [SQLMap Essentials](./09_.md)
+
+
+### 10 [Command Injections](./10_.md)
+
+
+### 11 [File Upload Attacks](./11_.md)
+
+
+### 12 [Server-side Attacks](./12_.md)
+
+
+### 13 [Login Brute Forcing](./13_.md)
+
+
+### 14 [Broken Authentication](./14_.md)
+
+
+### 15 [Web Attacks](./15_.md)
+
+
+### 16 [File Inclusion](./16_.md)
+
+
+### 17 [Session Security](./17_.md)
+
+
+### 18 [Web Service & API Attacks](./18_.md)
+
+
+### 19 [Hacking WordPress](./19_.md)
+
+
+---
+
+![eCPPTv3 Exam Topics](./assets/00_ecpptv3_exam_topics.png)
+
+---
+---
