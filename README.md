@@ -30,21 +30,39 @@ This module introduces the topic of HTTP web requests and how different web appl
 
 In the Introduction to Web Applications module, you will learn all of the basics of how web applications work and begin to look at them from an information security perspective.
 
-### 03 [Using Web Proxies](./03_.md)
+### 03 [Using Web Proxies](./03_web_proxies.md)
 
 Web application penetration testing frameworks are an essential part of any web penetration test. This module will teach you two of the best frameworks: Burp Suite and OWASP ZAP.
 
-### 04 [Information Gathering - Web Edition](./04_.md)
+- [x] Web Proxy
+- [x] Web Fuzzer
+- [x] Web Scanner
+
+### 04 [Information Gathering - Web Edition](./04_information_gathering_web.md)
 
 This module equips learners with essential web reconnaissance skills, crucial for ethical hacking and penetration testing. It explores both active and passive techniques, including DNS enumeration, web crawling, analysis of web archives and HTTP headers, and fingerprinting web technologies.
 
-### 05 [Attacking Web Applications with Ffuf](./05_.md)
+- [x] WHOIS
+- [x] DNS & Subdomains
+- [x] Fingerprinting
+- [x] Crawling
+- [x] Search Engine Discovery
+- [x] Web Archives
+- [x] Automating Recon
+
+### 05 [Attacking Web Applications with Ffuf](./05_attacking_web_applications_with_ffuf.md)
 
 This module covers the fundamental enumeration skills of web fuzzing and directory brute forcing using the Ffuf tool. The techniques learned in this module will help us in locating hidden pages, directories, and parameters when targeting web applications.
+
+- [x] Directory/Page Fuzzing
+- [x] Domain Fuzzing
+- [x] Parameter Fuzzing
 
 ### 06 [JavaScript Deobfuscation](./06_.md)
 
 This module will take you step-by-step through the fundamentals of JavaScript Deobfuscation until you can deobfuscate basic JavaScript code and understand its purpose.
+
+- [x] 
 
 ### 07 [Cross-Site Scripting (XSS)](./08_.md)
 
