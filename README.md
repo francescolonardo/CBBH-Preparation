@@ -139,7 +139,7 @@ Web services and APIs are frequently exposed to provide certain functionalities 
 
 WordPress is an open-source Content Management System (CMS) that can be used for multiple purposes.
 
-## 20 Bug Bounty Hunting Process
+### 20 Bug Bounty Hunting Process
 
 Bug bounty programs encourage security researchers to identify bugs and submit vulnerability reports. Getting into the world of bug bounty hunting without any prior experience can be a daunting task, though. This module covers the bug bounty hunting process to help you start bug bounty hunting in an organized and well-structured way. It's all about effectiveness and professionally communicating your findings.
 
