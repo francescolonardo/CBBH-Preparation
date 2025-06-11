@@ -34,16 +34,18 @@ In the Introduction to Web Applications module, you will learn all of the basics
 
 Web application penetration testing frameworks are an essential part of any web penetration test. This module will teach you two of the best frameworks: Burp Suite and OWASP ZAP.
 
-- [x] Web Proxy
+- [x] Web Proxy (Burp vs ZAP)
 - [x] Web Fuzzer
 - [x] Web Scanner
 
-### 04 [Information Gathering - Web Edition](./04_information_gathering_web.md)
+### 04 [Information Gathering - Web Edition](./04_information_gathering_web_edition.md)
 
 This module equips learners with essential web reconnaissance skills, crucial for ethical hacking and penetration testing. It explores both active and passive techniques, including DNS enumeration, web crawling, analysis of web archives and HTTP headers, and fingerprinting web technologies.
 
 - [x] WHOIS
-- [x] DNS & Subdomains
+- [x] DNS
+- [x] Subdomains
+- [x] Virtual Hosts
 - [x] Fingerprinting
 - [x] Crawling
 - [x] Search Engine Discovery
@@ -55,26 +57,45 @@ This module equips learners with essential web reconnaissance skills, crucial fo
 This module covers the fundamental enumeration skills of web fuzzing and directory brute forcing using the Ffuf tool. The techniques learned in this module will help us in locating hidden pages, directories, and parameters when targeting web applications.
 
 - [x] Directory/Page Fuzzing
-- [x] Domain Fuzzing
+- [x] Subdomain Fuzzing
+- [x] Virtual Host Fuzzing
 - [x] Parameter Fuzzing
+- [x] Value Fuzzing
 
-### 06 [JavaScript Deobfuscation](./06_.md)
+### 06 [JavaScript Deobfuscation](./06_javaScript_deobfuscation.md)
 
 This module will take you step-by-step through the fundamentals of JavaScript Deobfuscation until you can deobfuscate basic JavaScript code and understand its purpose.
 
-- [x] 
+- [x] Code Obfuscation/Deobfuscation
+- [x] Source Code Analysis
 
-### 07 [Cross-Site Scripting (XSS)](./08_.md)
+### 07 [Cross-Site Scripting (XSS)](./08_cross_site_scripting.md)
 
 Cross-Site Scripting (XSS) vulnerabilities are among the most common web application vulnerabilities. An XSS vulnerability may allow an attacker to execute arbitrary JavaScript code within the target's browser and result in complete web application compromise if chained together with other vulnerabilities. This module will teach you how to identify XSS vulnerabilities and exploit them.
 
-### 08 [SQL Injection Fundamentals](./08_.md)
+- [x] Stored XSS
+- [x] Reflected XSS
+- [x] DOM XSS
+- [x] XSS Discovery
+- [x] XSS Phishing Attack
+- [x] XSS Session Hijacking Attack
+- [x] XSS Prevention
+
+### 08 [SQL Injection Fundamentals](./08_sql_injection_fundamentals.md)
 
 Databases are an important part of web application infrastructure and SQL (Structured Query Language) to store, retrieve, and manipulate information stored in them. SQL injection is a code injection technique used to take advantage of coding vulnerabilities and inject SQL queries via an application to bypass authentication, retrieve data from the back-end database, or achieve code execution on the underlying server.
 
-### 09 [SQLMap Essentials](./09_.md)
+- [x] SQL Injections
+- [x] SQLi Exploitation
+- [x] SQLi Prevention
+
+### 09 [SQLMap Essentials](./09_sql_essentials.md)
 
 The SQLMap Essentials module will teach you the basics of using SQLMap to discover various types of SQL Injection vulnerabilities, all the way to the advanced enumeration of databases to retrieve all data of interest.
+
+- [x] Building Attacks
+- [x] Database Enumeration
+- [x] Advanced SQLMap Usage
 
 ### 10 [Command Injections](./10_.md)
 
