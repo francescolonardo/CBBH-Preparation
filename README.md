@@ -30,7 +30,7 @@ This module introduces the topic of HTTP web requests and how different web appl
 
 In the Introduction to Web Applications module, you will learn all of the basics of how web applications work and begin to look at them from an information security perspective.
 
-### 03 [Using Web Proxies](./03_web_proxies.md)
+### 03 [Using Web Proxies](./03_using_web_proxies.md)
 
 Web application penetration testing frameworks are an essential part of any web penetration test. This module will teach you two of the best frameworks: Burp Suite and OWASP ZAP.
 
@@ -64,14 +64,14 @@ This module covers the fundamental enumeration skills of web fuzzing and directo
 - [x] Parameter Fuzzing
 - [x] Value Fuzzing
 
-### 06 [JavaScript Deobfuscation](./06_javaScript_deobfuscation.md)
+### 06 [JavaScript Deobfuscation](./06_javascript_deobfuscation.md)
 
 This module will take you step-by-step through the fundamentals of JavaScript Deobfuscation until you can deobfuscate basic JavaScript code and understand its purpose.
 
 - [x] Code Obfuscation/Deobfuscation
 - [x] Source Code Analysis
 
-### 07 [Cross-Site Scripting (XSS)](./08_cross_site_scripting.md)
+### 07 [Cross-Site Scripting (XSS)](./07_cross_site_scripting.md)
 
 Cross-Site Scripting (XSS) vulnerabilities are among the most common web application vulnerabilities. An XSS vulnerability may allow an attacker to execute arbitrary JavaScript code within the target's browser and result in complete web application compromise if chained together with other vulnerabilities. This module will teach you how to identify XSS vulnerabilities and exploit them.
 
@@ -90,7 +90,7 @@ Databases are an important part of web application infrastructure and SQL (Struc
 - [x] SQLi Exploitation
 - [x] SQLi Prevention
 
-### 09 [SQLMap Essentials](./09_sql_essentials.md)
+### 09 [SQLMap Essentials](./09_sqlmap_essentials.md)
 
 The SQLMap Essentials module will teach you the basics of using SQLMap to discover various types of SQL Injection vulnerabilities, all the way to the advanced enumeration of databases to retrieve all data of interest.
 
@@ -205,7 +205,7 @@ Maintaining and keeping track of a user's session is an integral part of web app
 	- [x] Open Redirect
 	- [x] Remediation
 
-### 18 [Web Service & API Attacks](./18_web_services_and_api_attacks.md)
+### 18 [Web Service & API Attacks](./18_web_service_and_api_attacks.md)
 
 Web services and APIs are frequently exposed to provide certain functionalities in a programmatic way between heterogeneous devices and software components. Both web services and APIs can assist in integrating different applications or facilitate separation within a given application. This module covers how to identify the functionality a web service or API offers and exploit any security-related inefficiencies.
 
