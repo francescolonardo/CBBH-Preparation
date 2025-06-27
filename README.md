@@ -1,7 +1,7 @@
 # Certified Bug Bounty Hunter (CBBH) - Study Material
 
 <div>
-	<img src="https://academy.hackthebox.com/storage/exam_badges/34Usv5yEMMlzoADpEcxNrbASpMKwU660cNHAW0no.png" alt="CBBH Logo" width="150" height="auto">
+	<img src="./htb_cbbh_logo.png" alt="CBBH Logo" width="150" height="auto">
 </div>
 
 ## Introduction
